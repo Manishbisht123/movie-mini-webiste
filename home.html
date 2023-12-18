@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./Assets/img/icon/favIcon.png" type="image/x-icon">
+    <title>Movie Mini</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.7.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/media.css">
+</head>
+<body>
+
+    <!-- Pre-loader start -->
+
+       <div id="loader">
+       </div>
+
+    <!-- header section start -->
+
+    <header class="header">
+        <a href="home.html" class="logo">
+            Movie<span>Mini</span>
+        </a>
+        <div class="ri-menu-4-line" id="menu-icon"></div>
+        <ul class="navbar" id="navbar">
+            <li><a href="home.html" class="nav-active">Home</a></li>
+            <li><a href="movies.html">Movies</a></li>
+            <li><a href="series.html">Series</a></li>
+            <li><a href="show.html">Tv Shows</a></li>
+            <li><a href="categories.html">Categories</a></li>
+        </ul>
+        <div class="search">
+            <i class="ri-search-line"></i>
+        </div>
+        <a href="SignIn.html" class="SignIn_btn">Sign In</a>
+    </header>
+
+
+    <!-- home section start -->
+
+    <section class="home swiper" id="home">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide container">
+                <img src="./Assets/img/slider/slider1.jpg">
+                <div class="home-text">
+                    <span>Marvel Studios</span>
+                    <h1>Avengers: Endgame</h1>
+                    <h6>After the devastating events of Avengers: Infinity War (2018), <br>the universe is in ruins.
+                        With the help of remaining allies, the Avengers <br>assemble once more in order to reverse
+                        Thanos' actions and restore <br> balance to the universe.</h6>
+                    <p>2019 ‧ Action/Sci-fi ‧ 3h 2m</p>
+                    <a href="#" class="homebtn">Book Now</a>
+                    <a href="./home.html" class="play">
+                        <i class="ri-play-circle-line"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="swiper-slide container">
+                <img src="./Assets/img/slider/slider2.jpeg">
+                <div class="home-text">
+                    <span>Hollywood</span>
+                    <h1>Avatar: The Way of Water</h1>
+                    <h6>Jake Sully lives with his newfound family formed on the extrasolar <br>moon Pandora. Once a
+                        familiar threat returns to finish what was previously <br> started, Jake must work with Neytiri
+                        and the army of the Na'vi <br>race to protect their home.</h6>
+                    <p>2022 ‧ Sci-fi/Action ‧ 3h 12m</p>
+                    <a href="#" class="homebtn">Book Now</a>
+                    <a href="./home.html" class="play">
+                        <i class="ri-play-circle-line"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="swiper-slide container">
+                <img src="./Assets/img/slider/slider3.jpg">
+                <div class="home-text">
+                    <span>Marvel Studios</span>
+                    <h1>Spider-Man: No Way Home</h1>
+                    <h6>Spider-Man's identity now revealed, Peter asks Doctor Strange for help. <br>When a spell goes
+                        wrong, dangerous foes from other worlds start to appear, <br>forcing Peter to discover what it
+                        truly means to be Spider-Man.</h6>
+                    <p> 2021 ‧ Action/Sci-fi ‧ 2h 28m</p>
+                    <a href="#" class="homebtn">Book Now</a>
+                    <a href="./home.html" class="play">
+                        <i class="ri-play-circle-line"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="swiper-slide container">
+                <img src="./Assets/img/slider/slider4.jpg">
+                <div class="home-text">
+                    <span>Bollywood</span>
+                    <h1>Adipurush</h1>
+                    <h6>A modern adaptation of the Indian epic Ramayana which follows the exiled <br>prince Raghav's
+                        journey to rescue his wife Janaki from the raakshash <br>king Lankesh.</h6>
+                    <p>2023 ‧ Action/Fantasy ‧ 2h 59m</p>
+                    <a href="#" class="homebtn">Book Now</a>
+                    <a href="./home.html" class="play">
+                        <i class="ri-play-circle-line"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="swiper-slide container">
+                <img src="./Assets/img/slider/slider5.jpg">
+                <div class="home-text">
+                    <span>South Movie</span>
+                    <h1>Leo (Tamil)</h1>
+                    <h6>Violently pursued by criminals who insist he's a <br>former gangster, a humble cafe owner fights
+                        to <br>shield his family — and the truth about his identity.</h6>
+                    <p>2023 ‧ Action/Thriller ‧ 2h 44m</p>
+                    <a href="#" class="homebtn">Book Now</a>
+                    <a href="./home.html" class="play">
+                        <i class="ri-play-circle-line"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="swiper-slide container">
+                <img src="./Assets/img/slider/slider6.png">
+                <div class="home-text">
+                    <span>South Movie</span>
+                    <h1>Skanda: The Attacker</h1>
+                    <h6>When his sister is put into a coma, a man vows to get <br> revenge on the corrupt men who
+                        injured her.</h6>
+                    <p>2023 ‧ Action/Romance ‧ 2h 47m </p>
+                    <a href="#" class="homebtn">Book Now</a>
+                    <a href="./home.html" class="play">
+                        <i class="ri-play-circle-line"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="swiper-pagination"></div>
+    </section>
+
+
+    <!-- movie features section -->
+
+    <section class="movie" id="movie">
+        <h2 class="heading">Best Movies Collections</h2>
+        <div class="movies-container">
+            <div class="movie-box">
+                <div class="box-img">
+                    <img src="./Assets/img/movies-img/ant man.jpg">
+                </div>
+                <h3>Ant-Man</h3>
+                <span>2015 | Action | Comedy | 1h 57m</span>
+            </div>
+            <div class="movie-box">
+                <div class="box-img">
+                    <img src="./Assets/img/movies-img/avtar.jpg">
+                </div>
+                <h3>Avatar: The Way of Water</h3>
+                <span>2022 | Action | 3h 12m</span>
+            </div>
+            <div class="movie-box">
+                <div class="box-img">
+                    <img src="./Assets/img/movies-img/Jhon Wick.jpg">
+                </div>
+                <h3>John Wick</h3>
+                <span>2014 | Action | Crime | 1h 41m</span>
+            </div>
+            <div class="movie-box">
+                <div class="box-img">
+                    <img src="./Assets/img/movies-img/KGF.jpg">
+                </div>
+                <h3>K.G.F: Chapter 2</h3>
+                <span>2022 | Action | Crime | 2h 46m</span>
+            </div>
+            <div class="movie-box">
+                <div class="box-img">
+                    <img src="./Assets/img/movies-img/chichore.jpg">
+                </div>
+                <h3>Chhichhore</h3>
+                <span>2019 | Comedy | Romance | 2h 23m</span>
+            </div>
+            <div class="movie-box">
+                <div class="box-img">
+                    <img src="./Assets/img/movies-img/skanda.jpg">
+                </div>
+                <h3>Skanda: The Attacker</h3>
+                <span>2013 | Action | Drama | 2h 47m</span>
+            </div>
+            <div class="movie-box">
+                <div class="box-img">
+                    <img src="./Assets/img/movies-img/bramhastra.jpg">
+                </div>
+                <h3>Jab We Met</h3>
+                <span>2007 | Comedy | Romance | 2h 18m</span>
+            </div>
+            <div class="movie-box">
+                <div class="box-img">
+                    <img src="./Assets/img/movies-img/krrish3.jpg">
+                </div>
+                <h3>Simmba</h3>
+                <span>2018 | Action | Crime | 2h 38m</span>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- upcomig movie section -->
+
+    <section class="upcoming" id="upcoming">
+        <div class="upcoming-section">
+            <h5>Coming Soon</h5>
+            <a href="/">see more</a>
+        </div>
+        <div class="coming-container swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide box">
+                    <div class="box-img">
+                        <img src="./Assets/img/upcoming_movies/upcoming1.jpeg" alt="">
+                    </div>
+                    <h3>Dunki</h3>
+                </div>
+                <div class="swiper-slide box">
+                    <div class="box-img">
+                        <img src="./Assets/img/upcoming_movies/upcoming2.jpg" alt="">
+                    </div>
+                    <h3>Aquaman and the Lost Kingdom</h3>
+                </div>
+                <div class="swiper-slide box">
+                    <div class="box-img">
+                        <img src="./Assets/img/upcoming_movies/upcoming3.jpg" alt="">
+                    </div>
+                    <h3>Devil: British secret agent </h3>
+                </div>
+                <div class="swiper-slide box">
+                    <div class="box-img">
+                        <img src="./Assets/img/upcoming_movies/upcoming4.jpg" alt="">
+                    </div>
+                    <h3>Eagle </h3>
+                </div>
+                <div class="swiper-slide box">
+                    <div class="box-img">
+                        <img src="./Assets/img/upcoming_movies/upcoming5.jpg" alt="">
+                    </div>
+                    <h3>Guntur Kaaram </h3>
+                </div>
+                <div class="swiper-slide box">
+                    <div class="box-img">
+                        <img src="./Assets/img/upcoming_movies/upcoming6.jpg" alt="">
+                    </div>
+                    <h3>Hanuman </h3>
+                </div>
+                <div class="swiper-slide box">
+                    <div class="box-img">
+                        <img src="./Assets/img/upcoming_movies/upcoming7.jpg" alt="">
+                    </div>
+                    <h3>Indian 2</h3>
+                </div>
+                <div class="swiper-slide box">
+                    <div class="box-img">
+                        <img src="./Assets/img/upcoming_movies/upcoming8.jpg" alt="">
+                    </div>
+                    <h3>Malaikottai Vaaliban</h3>
+                </div>
+                <div class="swiper-slide box">
+                    <div class="box-img">
+                        <img src="./Assets/img/upcoming_movies/upcoming9.jpg" alt="">
+                    </div>
+                    <h3>Na Saami Ranga</h3>
+                </div>
+                <div class="swiper-slide box">
+                    <div class="box-img">
+                        <img src="./Assets/img/upcoming_movies/upcoming10.jpg" alt="">
+                    </div>
+                    <h3>Neru</h3>
+                </div>
+                <div class="swiper-slide box">
+                    <div class="box-img">
+                        <img src="./Assets/img/upcoming_movies/upcoming11.jpg" alt="">
+                    </div>
+                    <h3>Salaar: Part 1 - Ceasefire</h3>
+                </div>
+                <div class="swiper-slide box">
+                    <div class="box-img">
+                        <img src="./Assets/img/upcoming_movies/upcoming12.jpg" alt="">
+                    </div>
+                    <h3>The Beekeeper</h3>
+                </div>
+                <div class="swiper-slide box">
+                    <div class="box-img">
+                        <img src="./Assets/img/upcoming_movies/upcoming13.jpg" alt="">
+                    </div>
+                    <h3>The Book of Clarence</h3>
+                </div>
+                <div class="swiper-slide box">
+                    <div class="box-img">
+                        <img src="./Assets/img/upcoming_movies/upcoming14.jpg" alt="">
+                    </div>
+                    <h3>Kalki : 2898 AD</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- comedy movie section -->
+
+    <section class="comedy" id="comedy">
+        <div class="comedy-section">
+            <h5>Comedy Movies</h5>
+            <a href="/home.html">see more</a>
+        </div>
+        <div class="comedy-container swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide box">
+                    <div class="box-img">
+                        <img src="./Assets/img/comedy_movies/img1.jpg" alt="">
+                    </div>
+                    <h3>De Dana Dan</h3>
+                </div>
+                <div class="swiper-slide box">
+                    <div class="box-img">
+                        <img src="./Assets/img/comedy_movies/img2.jpg" alt="">
+                    </div>
+                    <h3>Hungama</h3>
+                </div>
+                <div class="swiper-slide box">
+                    <div class="box-img">
+                        <img src="./Assets/img/comedy_movies/img3.jpg" alt="">
+                    </div>
+                    <h3>Welcome</h3>
+                </div>
+                <div class="swiper-slide box">
+                    <div class="box-img">
+                        <img src="./Assets/img/comedy_movies/img4.jpg" alt="">
+                    </div>
+                    <h3>Garam Masala </h3>
+                </div>
+                <div class="swiper-slide box">
+                    <div class="box-img">
+                        <img src="./Assets/img/comedy_movies/img5.jpg" alt="">
+                    </div>
+                    <h3>Phir Hera Pheri</h3>
+                </div>
+                <div class="swiper-slide box">
+                    <div class="box-img">
+                        <img src="./Assets/img/comedy_movies/img6.jpg" alt="">
+                    </div>
+                    <h3>Golmaal Again </h3>
+                </div>
+                <div class="swiper-slide box">
+                    <div class="box-img">
+                        <img src="./Assets/img/comedy_movies/img7.jpg" alt="">
+                    </div>
+                    <h3>Dhamaal</h3>
+                </div>
+                <div class="swiper-slide box">
+                    <div class="box-img">
+                        <img src="./Assets/img/comedy_movies/img8.jpg" alt="">
+                    </div>
+                    <h3>Ajab Prem ki Ghazab Kahani</h3>
+                </div>
+                <div class="swiper-slide box">
+                    <div class="box-img">
+                        <img src="./Assets/img/comedy_movies/img9.jpg" alt="">
+                    </div>
+                    <h3>Action Replay</h3>
+                </div>
+                <div class="swiper-slide box">
+                    <div class="box-img">
+                        <img src="./Assets/img/comedy_movies/img10.jpg" alt="">
+                    </div>
+                    <h3>Dhol</h3>
+                </div>
+                <div class="swiper-slide box">
+                    <div class="box-img">
+                        <img src="./Assets/img/comedy_movies/img11.jpg" alt="">
+                    </div>
+                    <h3>Chennai Express</h3>
+                </div>
+                <div class="swiper-slide box">
+                    <div class="box-img">
+                        <img src="./Assets/img/comedy_movies/img12.jpg" alt="">
+                    </div>
+                    <h3>Munna Bhai M.B.B.S</h3>
+                </div>
+                <div class="swiper-slide box">
+                    <div class="box-img">
+                        <img src="./Assets/img/comedy_movies/img13.jpg" alt="">
+                    </div>
+                    <h3>Bhagam Baag</h3>
+                </div>
+                <div class="swiper-slide box">
+                    <div class="box-img">
+                        <img src="./Assets/img/comedy_movies/img14.jpg" alt="">
+                    </div>
+                    <h3>Chup Chup Ke</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- action movie section -->
+
+    <section class="action" id="action">
+        <div class="action-section">
+            <h5>Action Movies</h5>
+            <a href="/home.html">see more</a>
+        </div>
+        <div class="action-container swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide box">
+                    <div class="box-img">
+                        <img src="./Assets/img/action-movie/img1.jpg" alt="">
+                    </div>
+                    <h3>Mission Raniganj</h3>
+                </div>
+                <div class="swiper-slide box">
+                    <div class="box-img">
+                        <img src="./Assets/img/action-movie/img2.jpg" alt="">
+                    </div>
+                    <h3>Mission: Impossible</h3>
+                </div>
+                <div class="swiper-slide box">
+                    <div class="box-img">
+                        <img src="./Assets/img/action-movie/img3.jpg" alt="">
+                    </div>
+                    <h3>Skanda</h3>
+                </div>
+                <div class="swiper-slide box">
+                    <div class="box-img">
+                        <img src="./Assets/img/action-movie/img4.jpg" alt="">
+                    </div>
+                    <h3>Bhagavanth Kesari</h3>
+                </div>
+                <div class="swiper-slide box">
+                    <div class="box-img">
+                        <img src="./Assets/img/action-movie/img5.jpg" alt="">
+                    </div>
+                    <h3>Ghost</h3>
+                </div>
+                <div class="swiper-slide box">
+                    <div class="box-img">
+                        <img src="./Assets/img/action-movie/img6.jpg" alt="">
+                    </div>
+                    <h3>Rules Ranjann</h3>
+                </div>
+                <div class="swiper-slide box">
+                    <div class="box-img">
+                        <img src="./Assets/img/action-movie/img7.jpg" alt="">
+                    </div>
+                    <h3>Gadar 2</h3>
+                </div>
+                <div class="swiper-slide box">
+                    <div class="box-img">
+                        <img src="./Assets/img/action-movie/img8.jpg" alt="">
+                    </div>
+                    <h3>Jawan</h3>
+                </div>
+                <div class="swiper-slide box">
+                    <div class="box-img">
+                        <img src="./Assets/img/action-movie/img9.jpg" alt="">
+                    </div>
+                    <h3>Wanted</h3>
+                </div>
+                <div class="swiper-slide box">
+                    <div class="box-img">
+                        <img src="./Assets/img/action-movie/img10.jpg" alt="">
+                    </div>
+                    <h3>Fast X </h3>
+                </div>
+                <div class="swiper-slide box">
+                    <div class="box-img">
+                        <img src="./Assets/img/action-movie/img11.jpg" alt="">
+                    </div>
+                    <h3>RRR</h3>
+                </div>
+                <div class="swiper-slide box">
+                    <div class="box-img">
+                        <img src="./Assets/img/action-movie/img12.jpg" alt="">
+                    </div>
+                    <h3>Puspa</h3>
+                </div>
+                <div class="swiper-slide box">
+                    <div class="box-img">
+                        <img src="./Assets/img/action-movie/img13.jpg" alt="">
+                    </div>
+                    <h3>Avengers: Infinity War</h3>
+                </div>
+                <div class="swiper-slide box">
+                    <div class="box-img">
+                        <img src="./Assets/img/action-movie/img14.jpg" alt="">
+                    </div>
+                    <h3>Raw</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- newsletter section -->
+
+    <section class="newsletter" id="newsletter">
+        <h2>Subscribe To Get <br> newsletter</h2>
+        <form action="">
+            <input type="email" class="email" placeholder="Enter Email" required>
+            <input type="submit" value="Subscribe" class="SubscribeBtn">
+        </form>
+    </section>
+
+    <!-- footer section -->
+
+    <section class="footer" id="footer">
+        <div class="footer-section">
+            <a href="home.html" class="logo">
+                Movie<span>Mini</span>
+            </a>
+            <div class="social">
+                <span>Follow us</span>
+                <a href="#" class="ri-facebook-circle-fill"></a>
+                <a href="#" class="ri-twitter-fill"></a>
+                <a href="#" class="ri-instagram-fill"></a>
+                <a href="#" class="ri-youtube-fill"></a>
+            </div>
+        </div>
+        <ul class="footer_list">
+            <li><a href="#home" class="nav-active">Home</a></li>
+            <li><a href="#movies">Movies</a></li>
+            <li><a href="#series">Series</a></li>
+            <li><a href="#shows">Tv Shows</a></li>
+            <li><a href="#categories">Categories</a></li>
+        </ul>
+    </section>
+
+    <div class="copyright">
+        <p> &#169; <a href="home.html">Movie Mini </a> 2023 | All Right Reserved</p>
+    </div>
+
+    <a href="#" class="top">&#8593;</a>
+
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="./js/app.js"></script>
+
+
+</body>
+
+</html>

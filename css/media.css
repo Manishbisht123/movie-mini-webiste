@@ -1,0 +1,174 @@
+@media (max-width: 1080px) {
+    .home-text {
+        padding: 0 100px;
+    }
+}
+
+
+@media (max-width: 991px) {
+    header {
+        padding: 18px 4%;
+    }
+
+    section {
+        padding: 10px 4%;
+    }
+
+    .home-text {
+        padding: 0 4%;
+    }
+
+    .home-text h1 {
+        font-size: 3rem;
+    }
+
+    .homebtn {
+        padding: 0.6rem 1.2rem;
+        line-height: 2;
+    }
+}
+
+
+@media (max-width: 774px) {
+    header {
+        padding: 12px 4%;
+    }
+
+    #menu-icon {
+        display: initial;
+        color: #05A618;
+        font-size: 5vw;
+        font-weight: 800;
+    }
+
+    .header.shadow #menu-icon {
+        color: #05A618;
+    }
+
+    .navbar {
+        position: absolute;
+        top: -570px;
+        left: 0;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        background: #fff;
+        row-gap: 1.4rem;
+        padding: 20px;
+        box-shadow: 4px 4px 0 4px rgb(14 55 54/15%);
+        transition: 0.2s all linear;
+        text-align: center;
+        width: 100%;
+    }
+
+    .navbar .nav-active {
+        color: #05A618;
+    }
+
+    .navbar a {
+        color: #000;
+    }
+
+    .navbar a:hover {
+        color: #05A618;
+    }
+
+    .navbar.active {
+        top: 100%;
+    }
+
+    .search i {
+        display: none;
+    }
+
+    .home-text h1 {
+        font-size: 2.7rem;
+    }
+
+    .SignIn_btn {
+        padding: 0.6rem 1.2rem;
+    }
+
+    .movies-container {
+        grid-template-columns: repeat(auto-fit, minmax(160px, auto));
+    }
+
+    .play {
+        right: 2rem;
+        bottom: 10%;
+    }
+
+    .play .ri-play-circle-line {
+        padding: 10px;
+        font-size: 3.2rem;
+    }
+
+    .homebtn {
+        padding: 0.6rem 1.2rem;
+        line-height: 2;
+    }
+}
+
+@media (max-width: 472px) {
+    .newsletter form .email {
+        width: auto;
+    }
+
+
+    .footer {
+        flex-direction: column;
+        align-items: center;
+        row-gap: 1rem;
+    }
+
+    .container {
+        width: 100%;
+        min-height: 500px;
+    }
+
+    header {
+        padding: 10px 4%;
+    }
+
+    .home-text h1 {
+        font-size: 2.3rem;
+    }
+
+    .home-text h6 {
+        font-size: 0.8rem;
+    }
+
+    .home-text p {
+        font-size: 0.8rem;
+    }
+
+    .SignIn_btn {
+        padding: 0.6rem 1.2rem;
+    }
+
+    .play {
+        right: 2rem;
+        bottom: 10%;
+    }
+
+    .play .ri-play-circle-line {
+        padding: 8px;
+        font-size: 3rem;
+    }
+
+    .movies-container {
+        grid-template-columns: repeat(auto-fit, minmax(140px, auto));
+    }
+
+    .homebtn {
+        padding: 0.6rem 1.2rem;
+        line-height: 2;
+    }
+
+    .top {
+        font-size: 3vw;
+    }
+    .heading {
+        margin: 50px 0;
+    }
+}
