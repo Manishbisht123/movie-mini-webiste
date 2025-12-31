@@ -91,16 +91,22 @@ document.querySelectorAll(".google").forEach((btn) => {
   });
 });
 
-/* ================= Sign In ⇄ Logout (Index.html) ================= */
+/* ================= Sign In ⇄ Logout (Header Button) ================= */
 onAuthStateChanged(auth, (user) => {
   const signBtn = document.querySelector(".SignIn_btn");
 
   if (!signBtn) return;
 
   if (user) {
-    // Logged In → Show Logout
+    // Logged In → Logout
     signBtn.innerText = "Logout";
     signBtn.href = "#";
+
+    signBtn.style.backgroundColor = "#e50914";
+    signBtn.style.color = "#ffffff";
+    signBtn.style.borderRadius = "6px";
+    signBtn.style.padding = "8px 16px";
+    signBtn.style.transition = "0.3s";
 
     signBtn.onclick = (e) => {
       e.preventDefault();
@@ -110,9 +116,16 @@ onAuthStateChanged(auth, (user) => {
     };
 
   } else {
-    // Logged Out → Show Sign In
+    // Logged Out → Sign In
     signBtn.innerText = "Sign In";
     signBtn.href = "SignIn.html";
+
+    signBtn.style.backgroundColor = "";
+    signBtn.style.color = "";
+    signBtn.style.borderRadius = "";
+    signBtn.style.padding = "";
+    signBtn.style.transition = "";
+
     signBtn.onclick = null;
   }
 });
