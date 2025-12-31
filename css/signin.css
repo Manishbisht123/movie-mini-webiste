@@ -12,14 +12,13 @@
 
 :root {
     --primary-color: #3525D3;
-    --white-color: #fff;
+    --white-color: #ffffff;
     --black-color: #3C4A57;
     --light-gray: #E4E8EE;
     --text-green: #0f771c;
 }
 
-body,
-html {
+html, body {
     width: 100%;
     height: 100%;
     font-family: 'Afacad', sans-serif;
@@ -30,17 +29,15 @@ html {
     max-width: 668px;
     width: 100%;
     margin: auto;
+    position: relative;
 }
 
 .wrapper::before {
     content: '';
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+    inset: 0;
     background-image: url("../Assets/img/icon/bg.png");
-    background-position: center center;
+    background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     min-height: 100vh;
@@ -55,7 +52,6 @@ html {
 .wrapper .headline h1 {
     font-size: 42px;
     font-weight: 700;
-    line-height: 52px;
     color: var(--text-green);
 }
 
@@ -74,79 +70,153 @@ html {
 }
 
 .wrapper .form-group input {
-    display: block;
-    font-size: 16px;
-    line-height: 24px;
-    letter-spacing: -0.1px;
-    padding: 11px 15px;
-    height: 48px;
-    border-radius: 5px;
-    color: var(--black-color);
-    border: 1px solid #e4e8ee;
-    box-shadow: none;
     width: 100%;
-}
-
-.wrapper .form-group input:focus {
-    outline: none;
+    height: 48px;
+    padding: 11px 15px;
+    border-radius: 5px;
+    border: 1px solid var(--light-gray);
+    font-size: 15px;
+    color: var(--black-color);
 }
 
 .wrapper .form-group input::placeholder {
-    color: var(--black-color);
-    font-weight: 400;
     font-size: 14px;
+    color: var(--black-color);
 }
 
 .wrapper .btn {
     width: 100%;
-    margin: 15px 0 30px;
-    font-size: 14px;
-    line-height: 22px;
-    font-weight: 700;
-    padding: 12px 29px;
     height: 48px;
+    margin: 15px 0 20px;
+    font-size: 14px;
+    font-weight: 700;
     text-transform: uppercase;
     color: var(--white-color);
-    background-color: #000;
+    background: #000;
     border: none;
     border-radius: 2px;
     cursor: pointer;
-    text-align: center;
 }
 
 .wrapper .btn:hover {
-    background: #0f771c;
-}
-
-.wrapper .btn:focus {
-    outline: none;
-}
-
-.wrapper .account-exist {
-    color: var(--black-color);
-    border-top: 1px solid var(--light-gray);
-    padding-top: 20px;
-    text-align: center;
-}
-
-.wrapper .account-exist a {
-    color: var(--primary-color);
+    background: var(--text-green);
 }
 
 .wrapper .forget-password {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 15px 0;
+    padding: 12px 0;
+    font-size: 14px;
 }
 
 .wrapper .forget-password a {
     color: var(--primary-color);
 }
 
-.wrapper .forget-password .check-box {
-    font-size: 15px;
+.wrapper .check-box {
+    display: flex;
+    align-items: center;
+    gap: 6px;
     color: var(--black-color);
+}
+
+.account-exist {
+    border-top: 1px solid var(--light-gray);
+    padding-top: 18px;
+    text-align: center;
+    font-size: 14px;
+    color: var(--black-color);
+}
+
+.account-exist a {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.social-divider {
+    position: relative;
+    text-align: center;
+    margin: 10px 0 18px;
+}
+
+.social-divider span {
+    background: var(--white-color);
+    padding: 0 10px;
+    font-size: 13px;
+    color: var(--black-color);
+    position: relative;
+    z-index: 1;
+}
+
+.social-divider::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: var(--light-gray);
+    transform: translateY(-50%);
+}
+
+.social-login {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.social-btn {
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border-radius: 5px;
+    border: 1px solid var(--light-gray);
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--black-color);
+    background: var(--white-color);
+    transition: all 0.3s ease;
+}
+
+.social-btn i {
+    font-size: 18px;
+}
+
+.social-btn.google {
+    color: #000;
+}
+
+.social-btn.google i {
+    display: none;
+}
+
+.social-btn.google::before {
+    content: "";
+    width: 18px;
+    height: 18px;
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: inline-block;
+}
+
+.social-btn.google:hover {
+    background: #f1f5ff;
+    border-color: #4285F4;
+}
+
+.social-btn.facebook {
+    color: #1877f2;
+}
+
+.social-btn.facebook:hover {
+    background: #eef4ff;
+    border-color: #1877f2;
 }
 
 .signup.inActive {
@@ -161,21 +231,31 @@ html {
     display: block;
 }
 
-@media (max-width:1030px) {
-    .wrapper::before {
-        left: -25%;
-        min-height: 60vh;
-        height: 500px;
-    }
-}
-
-@media (max-width:767px) {
+@media (max-width: 768px) {
     .wrapper {
-        max-width: 550px;
+        padding: 40px 20px 0;
     }
 
     .wrapper .headline h1 {
-        font-size: 22px;
-        line-height: 25px;
+        font-size: 26px;
+    }
+
+    .wrapper .form {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .wrapper {
+        padding: 30px 15px 0;
+    }
+
+    .social-btn {
+        font-size: 13px;
+    }
+
+    .social-btn::before {
+        width: 16px;
+        height: 16px;
     }
 }
