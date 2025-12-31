@@ -1,17 +1,18 @@
-//login and sign up
+document.addEventListener("DOMContentLoaded", function () {
+    const loginBtn = document.getElementById("login");
+    const signupBtn = document.getElementById("signup");
+    const signinBox = document.querySelector(".signin");
+    const signupBox = document.querySelector(".signup");
 
-let btnLogin = document.getElementById("login");
-let btnSignUp = document.getElementById("signup");
+    loginBtn.addEventListener("click", function (e) {
+        e.preventDefault();
+        signupBox.classList.add("inActive");
+        signinBox.classList.add("active");
+    });
 
-let signIn = document.querySelector(".signin");
-let signUp = document.querySelector(".signup");
-
-btnLogin.onclick = function () {
-    signIn.classList.add("active");
-    signUp.classList.add("inActive");
-}
-
-btnSignUp.onclick = function () {
-    signIn.classList.remove("active");
-    signUp.classList.remove("inActive");
-}
+    signupBtn.addEventListener("click", function (e) {
+        e.preventDefault();
+        signinBox.classList.remove("active");
+        signupBox.classList.remove("inActive");
+    });
+});
