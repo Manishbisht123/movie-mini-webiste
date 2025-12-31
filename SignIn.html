@@ -1,91 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Movie Mini - Auth</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Movie Mini - Auth</title>
 
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.7.0/fonts/remixicon.css" rel="stylesheet">
-    <link rel="stylesheet" href="./css/signin.css">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.7.0/fonts/remixicon.css" rel="stylesheet">
+  <link rel="stylesheet" href="./css/signin.css">
 </head>
 <body>
 
-<div class="wrapper">
+<div class="auth-wrapper">
 
-    <div class="headline">
-        <h1>Movie <span>Mini</span></h1>
+  <h1 class="logo">Movie <span>Mini</span></h1>
+
+  <form class="auth-form">
+
+    <!-- LOGIN -->
+    <div class="auth-box signin active">
+
+      <input type="email" placeholder="Email">
+      <input type="password" placeholder="Password">
+
+      <div class="row">
+        <label><input type="checkbox"> Remember me</label>
+        <a href="#">Forget password?</a>
+      </div>
+
+      <button class="primary-btn">LOGIN</button>
+
+      <div class="divider"><span>or continue with</span></div>
+
+      <button class="social google">Continue with Google</button>
+      <button class="social facebook">
+        <i class="ri-facebook-fill"></i> Continue with Facebook
+      </button>
+
+      <p class="switch">
+        Create New a account?
+        <a href="#" id="signup">Signup</a>
+      </p>
+
     </div>
 
-    <form class="form">
+    <!-- SIGNUP -->
+    <div class="auth-box signup">
 
-        <div class="signin active">
-            <div class="form-group">
-                <input type="email" placeholder="Email">
-            </div>
+      <input type="text" placeholder="Full name">
+      <input type="email" placeholder="Email">
+      <input type="password" placeholder="Password">
 
-            <div class="form-group">
-                <input type="password" placeholder="Password">
-            </div>
+      <button class="primary-btn">SIGN UP</button>
 
-            <div class="forget-password">
-                <label><input type="checkbox"> Remember me</label>
-                <a href="#">Forget password?</a>
-            </div>
+      <div class="divider"><span>or continue with</span></div>
 
-            <button class="btn">LOGIN</button>
+      <button class="social google">Continue with Google</button>
+      <button class="social facebook">
+        <i class="ri-facebook-fill"></i> Continue with Facebook
+      </button>
 
-            <div class="social-divider">
-                <span>or continue with</span>
-            </div>
+      <p class="switch">
+        Already have an account?
+        <a href="#" id="login">Login</a>
+      </p>
 
-            <div class="social-login">
-                <a href="#" class="social-btn google">Continue with Google</a>
-                <a href="#" class="social-btn facebook">
-                    <i class="ri-facebook-fill"></i>
-                    Continue with Facebook
-                </a>
-            </div>
+    </div>
 
-            <div class="account-exist">
-                Create new account?
-                <a href="#" id="signup">Signup</a>
-            </div>
-        </div>
-
-        <div class="signup">
-            <div class="form-group">
-                <input type="text" placeholder="Full name">
-            </div>
-
-            <div class="form-group">
-                <input type="email" placeholder="Email">
-            </div>
-
-            <div class="form-group">
-                <input type="password" placeholder="Password">
-            </div>
-
-            <button class="btn">SIGN UP</button>
-
-            <div class="social-divider">
-                <span>or continue with</span>
-            </div>
-
-            <div class="social-login">
-                <a href="#" class="social-btn google">Continue with Google</a>
-                <a href="#" class="social-btn facebook">
-                    <i class="ri-facebook-fill"></i>
-                    Continue with Facebook
-                </a>
-            </div>
-
-            <div class="account-exist">
-                Already have an account?
-                <a href="#" id="login">Login</a>
-            </div>
-        </div>
-
-    </form>
+  </form>
 </div>
 
 <script src="./js/app.js"></script>
