@@ -1,67 +1,160 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="./Assets/img/icon/favIcon.png" type="image/x-icon">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="./Assets/img/icon/favIcon.png"
+      type="image/x-icon"
+    />
     <title>Movie Mini - Sign In</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.7.0/fonts/remixicon.css" rel="stylesheet">
-    <link rel="stylesheet" href="./css/signin.css">
-    <link rel="stylesheet" href="./css/media.css">
-</head>
 
-<body>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <!-- css main file link -->
+    <link rel="stylesheet" href="./css/signin.css" />
+    <link rel="stylesheet" href="./css/media.css" />
 
-    <!-- sign up and login  page section -->
+    <!-- firebase auth -->
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js"></script>
+  </head>
 
+  <body>
     <div class="wrapper">
-        <div class="headline">
-            <a href="home.html"><h1>Movie <span>Mini</span></h1></a>
+      <div class="headline">
+        <a href="home.html">
+          <h1>Movie <span>Mini</span></h1>
+        </a>
+      </div>
+
+      <form class="form" method="post" action="#">
+        <!-- SIGN UP -->
+        <div class="signup">
+          <div class="form-group">
+            <input type="text" placeholder="Full name" required />
+          </div>
+          <div class="form-group">
+            <input type="email" placeholder="Email" required />
+          </div>
+          <div class="form-group">
+            <input type="password" placeholder="Password" required />
+          </div>
+
+          <button type="submit" class="btn">SIGN UP</button>
+
+          <div class="or-divider">
+            <span>or continue with</span>
+          </div>
+
+          <div class="social-login">
+            <button type="button" class="social-btn google">
+              <svg width="20" height="20" viewBox="0 0 48 48">
+                <path
+                  fill="#EA4335"
+                  d="M24 9.5c3.54 0 6.72 1.23 9.23 3.65l6.9-6.9C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l8.04 6.25C12.43 13.4 17.74 9.5 24 9.5z"
+                />
+                <path
+                  fill="#4285F4"
+                  d="M46.1 24.55c0-1.63-.15-3.2-.43-4.72H24v9.02h12.44c-.54 2.9-2.17 5.36-4.62 7.02l7.12 5.53c4.16-3.84 6.56-9.49 6.56-16.85z"
+                />
+                <path
+                  fill="#FBBC05"
+                  d="M10.6 28.47c-.48-1.44-.75-2.98-.75-4.47s.27-3.03.75-4.47l-8.04-6.25C.92 16.24 0 20.03 0 24s.92 7.76 2.56 10.72l8.04-6.25z"
+                />
+                <path
+                  fill="#34A853"
+                  d="M24 48c6.48 0 11.93-2.14 15.9-5.8l-7.12-5.53c-1.98 1.33-4.52 2.12-8.78 2.12-6.26 0-11.57-3.9-13.4-9.47l-8.04 6.25C6.51 42.62 14.62 48 24 48z"
+                />
+              </svg>
+              Continue with Google
+            </button>
+
+            <button type="button" class="social-btn facebook">
+              <svg width="20" height="20" viewBox="0 0 24 24">
+                <path
+                  fill="#1877F2"
+                  d="M22.675 0h-21.35C.597 0 0 .597 0 1.326v21.348C0 23.403.597 24 1.326 24h11.495v-9.294H9.691V11.01h3.13V8.413c0-3.1 1.894-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.796.715-1.796 1.763v2.314h3.587l-.467 3.696h-3.12V24h6.116C23.403 24 24 23.403 24 22.674V1.326C24 .597 23.403 0 22.675 0z"
+                />
+              </svg>
+              Continue with Facebook
+            </button>
+          </div>
+
+          <div class="account-exist">
+            Already have an account? <a href="#" id="login">Login</a>
+          </div>
         </div>
-        <form class="form" method="post" action="#">
-            <div class="signup">
-                <div class="form-group">
-                    <input type="text" placeholder="Full name" required="">
-                </div>
-                <div class="form-group">
-                    <input type="email" placeholder="Email" required="">
-                </div>
-                <div class="form-group">
-                    <input type="password" placeholder="Password" required="">
-                </div>
-                <button type="submit" class="btn">SIGN UP</button>
-                <div class="account-exist">
-                    Already have an account? <a href="#" id="login">Login</a>
-                </div>
+
+        <!-- SIGN IN -->
+        <div class="signin">
+          <div class="form-group">
+            <input type="email" placeholder="Email" required />
+          </div>
+          <div class="form-group">
+            <input type="password" placeholder="Password" required />
+          </div>
+
+          <div class="forget-password">
+            <div class="check-box">
+              <input type="checkbox" id="checkbox" />
+              <label for="checkbox">Remember me</label>
             </div>
-            <div class="signin">
-                <div class="form-group">
-                    <input type="email" placeholder="Email" required="">
-                </div>
-                <div class="form-group">
-                    <input type="password" placeholder="Password" required="">
-                </div>
-                <div class="forget-password">
-                    <div class="check-box">
-                        <input type="checkbox" id="checkbox">
-                        <label for="checkbox">Remember me</label>
-                    </div>
-                    <a href="#">Forget password?</a>
-                </div>
-                <button type="submit" class="btn">LOGIN</button>
-                <div class="account-exist">
-                    Create New a account? <a href="#" id="signup">Signup</a>
-                </div>
-            </div>
-        </form>
+            <a href="#">Forget password?</a>
+          </div>
+
+          <button type="submit" class="btn">CONTINUE</button>
+
+          <div class="or-divider">
+            <span>or continue with</span>
+          </div>
+
+          <div class="social-login">
+            <button type="button" class="social-btn google">
+              <svg width="20" height="20" viewBox="0 0 48 48">
+                <path
+                  fill="#EA4335"
+                  d="M24 9.5c3.54 0 6.72 1.23 9.23 3.65l6.9-6.9C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l8.04 6.25C12.43 13.4 17.74 9.5 24 9.5z"
+                />
+                <path
+                  fill="#4285F4"
+                  d="M46.1 24.55c0-1.63-.15-3.2-.43-4.72H24v9.02h12.44c-.54 2.9-2.17 5.36-4.62 7.02l7.12 5.53c4.16-3.84 6.56-9.49 6.56-16.85z"
+                />
+                <path
+                  fill="#FBBC05"
+                  d="M10.6 28.47c-.48-1.44-.75-2.98-.75-4.47s.27-3.03.75-4.47l-8.04-6.25C.92 16.24 0 20.03 0 24s.92 7.76 2.56 10.72l8.04-6.25z"
+                />
+                <path
+                  fill="#34A853"
+                  d="M24 48c6.48 0 11.93-2.14 15.9-5.8l-7.12-5.53c-1.98 1.33-4.52 2.12-8.78 2.12-6.26 0-11.57-3.9-13.4-9.47l-8.04 6.25C6.51 42.62 14.62 48 24 48z"
+                />
+              </svg>
+              Continue with Google
+            </button>
+
+            <button type="button" class="social-btn facebook">
+              <svg width="20" height="20" viewBox="0 0 24 24">
+                <path
+                  fill="#1877F2"
+                  d="M22.675 0h-21.35C.597 0 0 .597 0 1.326v21.348C0 23.403.597 24 1.326 24h11.495v-9.294H9.691V11.01h3.13V8.413c0-3.1 1.894-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.796.715-1.796 1.763v2.314h3.587l-.467 3.696h-3.12V24h6.116C23.403 24 24 23.403 24 22.674V1.326C24 .597 23.403 0 22.675 0z"
+                />
+              </svg>
+              Continue with Facebook
+            </button>
+          </div>
+
+          <div class="account-exist">
+            Create new account? <a href="#" id="signup">Signup</a>
+          </div>
+        </div>
+      </form>
     </div>
 
-
-<!-- script JS -->
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-<script src="./js/app.js"></script>
-</body>
+    <!-- script file link -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="./js/app.js"></script>
+  </body>
 </html>
