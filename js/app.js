@@ -91,10 +91,9 @@ document.querySelectorAll(".google").forEach((btn) => {
   });
 });
 
-/* ================= Sign In ⇄ Logout (Header Button) ================= */
+/* ================= Sign In ⇄ Logout with Confirmation ================= */
 onAuthStateChanged(auth, (user) => {
   const signBtn = document.querySelector(".SignIn_btn");
-
   if (!signBtn) return;
 
   if (user) {
@@ -110,9 +109,14 @@ onAuthStateChanged(auth, (user) => {
 
     signBtn.onclick = (e) => {
       e.preventDefault();
-      signOut(auth).then(() => {
-        window.location.reload();
-      });
+
+      const confirmLogout = confirm("Are you sure you want to logout?");
+
+      if (confirmLogout) {
+        signOut(auth).then(() => {
+          window.location.reload();
+        });
+      }
     };
 
   } else {
